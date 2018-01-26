@@ -4,9 +4,10 @@ angular.module("MushroomApp").controller("MushroomCtrl", function($scope, Mushro
 
   MushroomFactory.getShrooms()
   .then((shroomObjects) => {
+    console.log(shroomObjects);
     $scope.shroomArr = [];
-    for (let shroom in shroomObjects.data.mushrooms) {
-      $scope.shroomArr.push(shroomObjects.data.mushrooms[shroom]);
+    for (let shroom in shroomObjects) {
+      $scope.shroomArr.push(shroomObjects[shroom]);
     }
     console.log($scope.shroomArr);
   });
