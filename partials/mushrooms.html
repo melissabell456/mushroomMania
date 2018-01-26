@@ -1,0 +1,9 @@
+<!-- text box to take input and filter down to mushrooms whose description matches entered text-->
+<input type=text>
+<!-- radio btns Poisonous Non-poisonous to filter down mushrooms w/ that value-->
+<input type="radio" value="poisonous"> Poisonous
+<input type="radio" value="non-poisonous"> Non-Poisonous
+<!-- list of all mushrooms -->
+<ul>
+  <li ng-repeat="shroom in shroomArr">{{shroom.name}}</li>
+</ul>
